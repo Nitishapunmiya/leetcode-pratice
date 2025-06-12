@@ -1,0 +1,17 @@
+class Solution {
+public:
+    int secondLargestElement(vector<int>& nums) {
+        int maxi=INT_MIN;
+        int smax=INT_MIN;
+        for(int num:nums){
+            maxi=max(maxi,num);
+        }
+        for(int num:nums){
+            if(num!=maxi){
+                smax=max(smax,num);
+            }
+        }
+        return (smax==INT_MIN)? -1: smax;
+      
+    }
+};
